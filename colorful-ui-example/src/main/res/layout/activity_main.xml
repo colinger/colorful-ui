@@ -7,7 +7,7 @@
     android:background="#eeeeee"
     android:orientation="vertical" >
 
-    <com.jxr202.colorful_ui.TitleBar
+    <com.csapp.widget.ui.TitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="44dp"
@@ -19,7 +19,7 @@
         jxr202:titleTextSize="15sp"
         jxr202:titleTextVisibility="visible" />
 
-    <com.jxr202.colorful_ui.DateSelectView
+    <com.csapp.widget.ui.DateSelectView
         android:id="@+id/dateSelectView"
         android:layout_width="match_parent"
         android:layout_height="50dp"

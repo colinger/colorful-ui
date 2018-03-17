@@ -1,4 +1,4 @@
-package com.jxr202.colorful_ui;
+package com.csapp.widget.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,10 +12,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.Calendar;
+import com.jxr202.colorful_ui.R;
 
-import static com.jxr202.colorful_ui.DateUtils.dateToString;
-import static com.jxr202.colorful_ui.DateUtils.getTodayDate;
+import java.util.Calendar;
 
 /**
  * Created by Jxr202 on 2017/12/15
@@ -146,7 +145,7 @@ public class DateSelectView extends RelativeLayout {
         mDateTodayParams.addRule(ALIGN_PARENT_END);
         mDateTodayParams.setMarginEnd(16);
 
-        mDateTitle.setText(getTodayDate());
+        mDateTitle.setText(DateUtils.getTodayDate());
 
         addView(mDateLeft, mDateLeftParams);
         addView(mDateRight, mDateRightParams);
@@ -161,7 +160,7 @@ public class DateSelectView extends RelativeLayout {
             public void onClick(View view) {
                 if (mListener != null && mClickable) {
                     mCalendar = DateUtils.getBeforeDay(mCalendar);
-                    mDateTitle.setText(dateToString(mCalendar.getTime(), mFormat));
+                    mDateTitle.setText(DateUtils.dateToString(mCalendar.getTime(), mFormat));
                     mListener.onDateLeftClick();
                 }
             }
@@ -170,11 +169,11 @@ public class DateSelectView extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 if (mListener != null && mClickable) {
-                    if (dateToString(mCalendar.getTime(), mFormat).equals(dateToString(Calendar.getInstance().getTime(), mFormat))) {
+                    if (DateUtils.dateToString(mCalendar.getTime(), mFormat).equals(DateUtils.dateToString(Calendar.getInstance().getTime(), mFormat))) {
                         return;
                     }
                     mCalendar = DateUtils.getAfterDay(mCalendar);
-                    mDateTitle.setText(dateToString(mCalendar.getTime(), mFormat));
+                    mDateTitle.setText(DateUtils.dateToString(mCalendar.getTime(), mFormat));
                     mListener.onDateRightClick();
                 }
             }
@@ -191,11 +190,11 @@ public class DateSelectView extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 if (mListener != null && mClickable) {
-                    if (dateToString(mCalendar.getTime(), mFormat).equals(dateToString(Calendar.getInstance().getTime(), mFormat))) {
+                    if (DateUtils.dateToString(mCalendar.getTime(), mFormat).equals(DateUtils.dateToString(Calendar.getInstance().getTime(), mFormat))) {
                         return;
                     }
                     initCalendar();
-                    mDateTitle.setText(dateToString(mCalendar.getTime(), mFormat));
+                    mDateTitle.setText(DateUtils.dateToString(mCalendar.getTime(), mFormat));
                     mListener.onDateTodayClick();
                 }
             }

@@ -1,4 +1,4 @@
-package com.jxr202.colorful_ui;
+package com.csapp.widget.ui;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -1,4 +1,4 @@
-package com.jxr202.colorful_ui;
+package com.csapp.widget.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.jxr202.colorful_ui.R;
 
 /**
  * Created by Jxr35 on 2018/2/27
