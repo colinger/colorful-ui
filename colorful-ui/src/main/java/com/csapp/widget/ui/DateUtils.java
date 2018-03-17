@@ -2,8 +2,6 @@ package com.csapp.widget.ui;
 
 import android.content.Context;
 
-import com.jxr202.colorful_ui.R;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

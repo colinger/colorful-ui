@@ -12,8 +12,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.jxr202.colorful_ui.R;
-
 /**
  * Created by Jxr35 on 2018/2/27
  */
